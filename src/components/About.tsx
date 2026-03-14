@@ -11,7 +11,7 @@ export default function About() {
           {/* Portrait */}
           <div className="reveal relative max-w-sm mx-auto lg:mx-0">
             <div className="rounded-2xl overflow-hidden zoom aspect-[3/4] border border-[#1c1c24]">
-              <Image src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&fit=crop" alt="Alex Morgan" fill className="object-cover"/>
+              <Image src="https://res.cloudinary.com/degearesj/image/upload/v1773451178/profile_itdrww.jpg" alt="Olúwadámiláre Ogundare" fill className="object-cover"/>
               <div className="absolute inset-0 bg-gradient-to-t from-[#060608]/60 to-transparent"/>
             </div>
             {/* Corner decoration */}
@@ -20,7 +20,7 @@ export default function About() {
             {/* Floating card */}
             <div className="absolute -bottom-4 left-4 glass border border-[#1c1c24] rounded-xl p-4">
               <p className="text-[10px] font-mono text-[#00ff88] mb-0.5">EXPERIENCE</p>
-              <p className="text-xl font-display font-bold text-white">5+ <span className="text-sm font-normal text-[#444]">years</span></p>
+              <p className="text-xl font-display font-bold text-white">3+ <span className="text-sm font-normal text-[#444]">years</span></p>
             </div>
           </div>
 
