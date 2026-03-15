@@ -21,7 +21,7 @@ export default function Footer() {
           <div>
             <p className="text-[10px] font-mono text-[#333] uppercase tracking-widest mb-4">Online</p>
             <div className="flex flex-col gap-2.5">
-              {[["GitHub","https://github.com/Greggart9"],["Twitter / X","https://x.com/Oluwad_amilare"],["LinkedIn","https://www.linkedin.com/in/oluwadamilaregreggart9/"],["Upwork","https://www.upwork.com/fl/greggart9"]].map(([l,h])=>(
+              {[["GitHub","https://github.com/Greggart9"],["Twitter / X","https://x.com/Oluwad_amilare"],["LinkedIn","https://www.linkedin.com/in/oluwadamilaregreggart9/"],["Upwork","https://www.upwork.com/freelancers/~01f4206c2db39023fa"],["Contra","https://contra.com/oluwadamilare_ogundare_evytuaxa/work"]].map(([l,h])=>(
                 <a key={h} href={h} target="_blank" rel="noreferrer" className="text-[#555] hover:text-white text-sm transition-colors u-line font-mono">{l}</a>
               ))}
             </div>

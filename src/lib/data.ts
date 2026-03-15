@@ -143,12 +143,12 @@ export const projects: Project[] = [
 ];
 
 export const services = [
-  { icon:"⬡", title:"Frontend Development",  desc:"Fast, accessible, pixel-perfect UIs. React, Next.js, and the modern web stack — built to perform.", tools:["Next.js","React","TypeScript","Tailwind"] },
-  { icon:"◈", title:"Full-Stack Engineering", desc:"End-to-end product engineering from database schema to deployed feature. Pragmatic and scalable.", tools:["Node.js","tRPC","Prisma","PostgreSQL"] },
-  { icon:"✦", title:"Web3 & DeFi Interfaces", desc:"Clean, trustworthy interfaces for on-chain products. Wallet connections, transactions, and live chain data.", tools:["wagmi","Viem","ethers.js","Hardhat"] },
-  { icon:"◎", title:"API Design & Integration", desc:"RESTful and GraphQL APIs, third-party integrations, webhooks, and real-time data pipelines.", tools:["REST","GraphQL","WebSockets","tRPC"] },
-  { icon:"⟐", title:"Performance & DX",        desc:"Bundle optimisation, Core Web Vitals, CI/CD pipelines, and monorepo tooling to ship faster.", tools:["Turborepo","Vitest","Lighthouse","Docker"] },
-  { icon:"◇", title:"Technical Consulting",    desc:"Architecture reviews, tech stack selection, code audits, and engineering team mentorship.", tools:["System Design","Code Review","Mentoring"] },
+  { icon:"⬡", title:"Frontend Development",  desc:"Fast, accessible, pixel-perfect UIs. React, Next.js, and the modern web stack — built to perform.", tools:["Next.js","React","TypeScript","Tailwind","Responsive Design"] },
+  { icon:"◈", title:"CMS Development", desc:"Building and managing dynamic websites using CMS platforms with custom themes, plugins, and structured content management.", tools:["WordPress","Themes","Plugins","Content Management"] },
+  { icon:"✦", title:"Web Management", desc:"Managing live websites including updates, hosting configuration, backups, and maintaining site performance and security.", tools:["Hosting","cPanel","Maintenance","Security"] },
+  { icon:"◎", title:"Performance Optimization", desc:"Improving website speed and efficiency through code optimization, asset compression, and performance best practices.", tools:["Lighthouse","SEO","Caching","Lazy Loading"] },
+  { icon:"⟐", title:"Testing & Debugging",  desc:"Identifying, diagnosing, and fixing bugs to ensure websites function correctly across different browsers, devices, and environments.", tools:["Bug Fixing","DevTools","Error Handling"] },
+  { icon:"◇", title:"Custom Illustration",    desc:"Designing custom website logos, icons, and SVG illustrations that strengthen brand identity and improve user experience.", tools:["SVG","Figma","Icons","Logo Design"] },
 ];
 
 export const whyMe = [
@@ -156,8 +156,8 @@ export const whyMe = [
   { num:"02", title:"TypeScript Everywhere",    desc:"I write typed, self-documenting code from API contract to UI component. Fewer runtime bugs, faster onboarding." },
   { num:"03", title:"Performance Obsessed",     desc:"Every build I ship hits green on Core Web Vitals. Bundle size, load time, and runtime performance are first-class concerns." },
   { num:"04", title:"Clear Communication",      desc:"I write detailed PRs, update async, and document decisions. You'll always know what's in progress and what's blocked." },
-  { num:"05", title:"Full-Stack Fluency",       desc:"I'm as comfortable writing a Postgres migration as styling a hover state. No handoff friction between layers." },
-  { num:"06", title:"Open Source Contributor",  desc:"I contribute to the tools I use and build in public. The community keeps me sharp and accountable." },
+  { num:"05", title:"Clean Code Practices",       desc:"I write readable, maintainable code with clear structure and consistent patterns so projects stay easy to scale and collaborate on." },
+  { num:"06", title:"Continuous Learning",  desc:"Technology evolves fast, and I stay current by learning new tools and improving workflows." },
 ];
 
 export const faqs = [
@@ -171,7 +171,6 @@ export const faqs = [
 
 export const stats = [
   { value:3,  suffix:"+", label:"Years Experience" },
-  { value:8, suffix:"+", label:"Projects Shipped" },
   { value:18, suffix:"+",label:"GitHub Repos" },
   { value:99, suffix:"%", label:"On-Time Delivery" },
 ];

@@ -66,7 +66,7 @@ export default function Hero() {
             </div>
 
             <p className={`text-[#666] text-base md:text-lg leading-relaxed max-w-md mb-9 transition-all duration-700 delay-300 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-6"}`}>
-              I&apos;m Olúwadámiláre Ogundare — a frontend engineer with 3+ years building performant, accessible web applications. I turn complex problems into clean, maintainable code.
+              I&apos;m Olúwadámiláre Ogundare, a frontend engineer with 3+ years building fast, scalable web applications. I turn complex problems into clean, maintainable solutions.
             </p>
 
             <div className={`flex flex-wrap gap-4 mb-12 transition-all duration-700 delay-400 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-6"}`}>
@@ -76,7 +76,7 @@ export default function Hero() {
 
             {/* Stats */}
             <div className={`flex gap-10 transition-all duration-700 delay-500 ${show?"opacity-100":"opacity-0"}`}>
-              {[["3+","Years"],["8+","Projects"],["18+","Repos"]].map(([v,l])=>(
+              {[["3+","Years"],["18+","Repos"],["99%","Delivery"]].map(([v,l])=>(
                 <div key={l}>
                   <div className="font-display text-2xl font-bold g-text">{v}</div>
                   <div className="text-[#333] text-xs mt-0.5 font-mono">{l}</div>
@@ -115,7 +115,7 @@ export default function Hero() {
 
               {/* Floating tech chips */}
               <div className="px-5 pb-5 flex flex-wrap gap-2">
-                {["React","Next.js","TypeScript","Tailwind","Node.js","PostgreSQL"].map(t=>(
+                {["React","Next.js","TypeScript","Tailwind","Framer Motion","PostgreSQL"].map(t=>(
                   <span key={t} className="text-[10px] font-mono border border-[#1c1c24] text-[#444] px-2.5 py-1 rounded-full hover:border-[#00ff88]/30 hover:text-[#00ff88] transition-colors">
                     {t}
                   </span>
@@ -132,7 +132,7 @@ export default function Hero() {
               </div>
               <div className="glass border border-[#1c1c24] rounded-xl p-4 hover:border-[#00c4ff]/20 transition-colors">
                 <p className="text-[10px] font-mono text-[#333] mb-1">CURRENT STACK</p>
-                <p className="text-white text-sm font-mono">Next.js 14 + tRPC</p>
+                <p className="text-white text-sm font-mono">Next.js 16 + tRPC</p>
                 <p className="text-[#00c4ff] text-[10px] font-mono mt-0.5">App Router ✓</p>
               </div>
             </div>

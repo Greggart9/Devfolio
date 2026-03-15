@@ -9,14 +9,29 @@ const socials = [
 ];
 
 export default function Contact() {
-  const [form, setForm]     = useState({ name:"", email:"", message:"" });
-  const [sent, setSent]     = useState(false);
+  const [form, setForm]       = useState({ name:"", email:"", message:"" });
+  const [sent, setSent]       = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => { setLoading(false); setSent(true); }, 1200);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) throw new Error('Failed');
+
+      setSent(true);
+    } catch {
+      alert('Something went wrong. Try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -26,7 +41,6 @@ export default function Contact() {
 
       <div className="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
 
-        {/* Big headline */}
         <div className="reveal text-center mb-16">
           <p className="text-[10px] font-mono text-[#00ff88] uppercase tracking-widest mb-5">// let&apos;s talk</p>
           <h2 className="font-display text-[clamp(2.8rem,7vw,6.5rem)] font-bold leading-none mb-5">
@@ -64,7 +78,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Status card */}
             <div className="code-card rounded-2xl p-5">
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2 h-2 rounded-full bg-[#00ff88] animate-glow"/>

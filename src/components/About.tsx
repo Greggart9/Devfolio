@@ -20,7 +20,7 @@ export default function About() {
             {/* Floating card */}
             <div className="absolute -bottom-4 left-4 glass border border-[#1c1c24] rounded-xl p-4">
               <p className="text-[10px] font-mono text-[#00ff88] mb-0.5">EXPERIENCE</p>
-              <p className="text-xl font-display font-bold text-white">3+ <span className="text-sm font-normal text-[#444]">years</span></p>
+              <p className="text-xl font-display font-bold text-white">3+ <span className="text-sm font-normal text-white">years</span></p>
             </div>
           </div>
 
@@ -37,7 +37,7 @@ export default function About() {
               I&apos;m Olúwadámiláre Ogundare — a frontend engineer who believes the best code is the code you never have to explain. I care about performance, accessibility, and developer experience in equal measure.
             </p>
             <p className="text-[#444] text-sm leading-relaxed">
-              I&apos;ve shipped products used by hundreds of thousands of people — from fintech dashboards to Web3 interfaces to open-source tooling. I write in TypeScript, think in systems, and ship on Friday.
+              I&apos;ve built and shipped a range of projects — from fintech-style dashboards to Web3 interfaces and experimental tools. I write in TypeScript, think in systems, and ship on Fridays.
             </p>
 
             {/* Skill bars */}
