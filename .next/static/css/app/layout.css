@@ -719,6 +719,9 @@ video {
 .inline-block{
   display: inline-block;
 }
+.inline{
+  display: inline;
+}
 .flex{
   display: flex;
 }
@@ -1116,10 +1119,6 @@ video {
   --tw-divide-opacity: 1;
   border-color: rgb(28 28 36 / var(--tw-divide-opacity, 1));
 }
-.divide-\[\#8e8ea6\] > :not([hidden]) ~ :not([hidden]){
-  --tw-divide-opacity: 1;
-  border-color: rgb(142 142 166 / var(--tw-divide-opacity, 1));
-}
 .overflow-hidden{
   overflow: hidden;
 }
@@ -1278,6 +1277,16 @@ video {
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
+.from-black{
+  --tw-gradient-from: #000 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.from-black\/50{
+  --tw-gradient-from: rgb(0 0 0 / 0.5) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
 .via-\[\#00ff88\]\/15{
   --tw-gradient-to: rgb(0 255 136 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), rgb(0 255 136 / 0.15) var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -1293,6 +1302,18 @@ video {
 .via-black\/30{
   --tw-gradient-to: rgb(0 0 0 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), rgb(0 0 0 / 0.3) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+.via-black{
+  --tw-gradient-to: rgb(0 0 0 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #000 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+.via-black\/50{
+  --tw-gradient-to: rgb(0 0 0 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(0 0 0 / 0.5) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+.via-black\/90{
+  --tw-gradient-to: rgb(0 0 0 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(0 0 0 / 0.9) var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 .to-\[\#00c4ff\]{
   --tw-gradient-to: #00c4ff var(--tw-gradient-to-position);
@@ -1625,10 +1646,6 @@ video {
 }
 .text-white\/80{
   color: rgb(255 255 255 / 0.8);
-}
-.text-\[\#c2c2cf\]{
-  --tw-text-opacity: 1;
-  color: rgb(194 194 207 / var(--tw-text-opacity, 1));
 }
 .placeholder-\[\#222\]::-moz-placeholder{
   --tw-placeholder-opacity: 1;
