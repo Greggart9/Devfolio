@@ -130,15 +130,15 @@ export const projects: Project[] = [
       "MyGresume lets you upload your existing resume once, paste any job description, and instantly receive an AI-tailored version with rewritten bullets and summary optimized for that specific role — complete with a matching cover letter, multiple professional templates, and one-click download in PDF or DOCX format.",
     tags: ["Next.js", "TypeScript", "AI Integration", "Zustand", "Framer Motion", "Tailwind CSS v4"],
     cover:   "/image/asset16.jpg",
-    video:   "https://res.cloudinary.com/degearesj/video/upload/v1773788193/mygresume_dsrmqf.mp4",
+    video:   "https://res.cloudinary.com/degearesj/video/upload/v1778676877/updated_gresume_aaqrvq.mp4",
     hero:    "/image/asset15.jpg",
     screens: [
       "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80&fit=crop",
-      "/image/asset19.png",
-      "/image/asset17.png",
+      "/image/asset20.png",
+      "/image/asset21.png",
     ],
-    liveUrl:   "https://github.com",
-    githubUrl: "https://github.com",
+    liveUrl:   "https://mygresume.vercel.app",
+    githubUrl: "https://github.com/Greggart9/mygresume",
   },
 ];
 
