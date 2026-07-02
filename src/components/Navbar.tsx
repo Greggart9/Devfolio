@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled?"bg-[#060608]/92 backdrop-blur-xl border-b border-[#1c1c24]":""}`}>
-      <div className="max-w-6xl mx-auto px-6 md:px-10 flex items-center justify-between h-16">
+      <div className="max-w-[1380px] mx-auto px-6 md:px-10 flex items-center justify-between h-16">
 
         {/* Logo — terminal style */}
         <a href="/" className="flex items-center gap-2 group">

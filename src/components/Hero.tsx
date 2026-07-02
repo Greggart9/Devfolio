@@ -42,8 +42,8 @@ export default function Hero() {
       <div className="absolute top-28 right-16 md:right-28 w-28 h-28 rounded-full border border-[#00ff88]/40 animate-spin-slow"/>
       <div className="absolute top-32 right-20 md:right-32 w-16 h-16 rounded-full border border-[#00c4ff]/40 animate-spin-slow" style={{animationDirection:"reverse",animationDuration:"13s"}}/>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-10 w-full py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-[1380px] mx-auto px-6 md:px-10 w-full py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
           {/* Left */}
           <div>
@@ -65,8 +65,8 @@ export default function Hero() {
               <span key={idx} className="text-[#00c4ff] text-sm font-mono animate-fade-in">{roles[idx]}</span>
             </div>
 
-            <p className={`text-[#666] text-base md:text-lg leading-relaxed max-w-md mb-9 transition-all duration-700 delay-300 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-6"}`}>
-              I&apos;m Olúwadámiláre Ogundare, a frontend engineer with 3+ years building fast, scalable web applications. I turn complex problems into clean, maintainable solutions.
+            <p className={`text-[#666] text-base md:text-lg leading-relaxed max-w-xl mb-9 transition-all duration-700 delay-300 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-6"}`}>
+              I&apos;m Olúwadámiláre Ogundare, a frontend engineer with 3+ years of experience building fast, scalable web applications. I'm currently deepening my skills in backend development to grow into a full-stack role, while bringing the same focus on clean, maintainable solutions to every layer of the stack.
             </p>
 
             <div className={`flex flex-wrap gap-4 mb-12 transition-all duration-700 delay-400 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-6"}`}>
@@ -86,7 +86,7 @@ export default function Hero() {
           </div>
 
           {/* Right — code card */}
-          <div className={`transition-all duration-1000 delay-300 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-8"}`}>
+          <div className={`transition-all duration-1000 pt-20 delay-300 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-8"}`}>
             <div className="code-card relative overflow-hidden rounded-2xl p-0 scanline">
               {/* Window chrome */}
               <div className="flex items-center gap-2 px-5 py-4 border-b border-[#1c1c24]">

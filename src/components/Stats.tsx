@@ -14,7 +14,7 @@ function Counter({ end, suffix }: { end:number; suffix:string }) {
 export default function Stats() {
   return (
     <section className="py-20 border-y border-[#1c1c24]">
-      <div className="max-w-6xl mx-auto px-6 md:px-10">
+      <div className="max-w-[1380px] mx-auto px-6 md:px-10">
         <div className="grid  md:grid-cols-3 gap-8 md:gap-0 md:divide-x divide-[#1c1c24]">
           {stats.map(s=>(
             <div key={s.label} className="md:px-10 first:pl-0 last:pr-0 text-center md:text-left">

@@ -7,7 +7,7 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="py-28 md:py-36">
-      <div className="max-w-6xl mx-auto px-6 md:px-10">
+      <div className="max-w-[1380px] mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
           {/* Left sticky */}

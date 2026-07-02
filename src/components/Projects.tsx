@@ -5,7 +5,7 @@ import { projects } from "@/lib/data";
 export default function Projects() {
   return (
     <section id="projects" className="py-28 md:py-36">
-      <div className="max-w-6xl mx-auto px-6 md:px-10">
+      <div className="max-w-[1380px] mx-auto px-6 md:px-10">
 
         <div className="reveal flex flex-col md:flex-row md:items-end justify-between gap-5 mb-14">
           <div>
@@ -20,8 +20,8 @@ export default function Projects() {
             <Link
               key={p.slug}
               href={`/projects/${p.slug}`}
-              className={`reveal d${(i%2)+1} group relative rounded-3xl overflow-hidden zoom lift block`}
-              style={{ minHeight: i === 0 ? "480px" : "400px" }}
+              className={`reveal d${(i%2)+1} group relative rounded-2xl overflow-hidden zoom lift block`}
+              style={{ minHeight: i === 0 ? "380px" : "380px" }}
             >
               <Image src={p.cover} alt={p.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105"/>
 

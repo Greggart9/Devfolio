@@ -9,7 +9,7 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="py-28 md:py-36 relative">
       <div className="blob bg-[#00ff88]/5 w-[400px] h-[400px] bottom-0 left-0"/>
-      <div className="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+      <div className="max-w-[1380px] mx-auto px-6 md:px-10 relative z-10">
 
         <div className="reveal mb-14">
           <p className="text-[10px] font-mono text-[#00ff88] uppercase tracking-widest mb-3">// social proof</p>

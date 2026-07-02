@@ -56,4 +56,3 @@ export default function RootLayout({
   );
 }
 
-// NEXT_PUBLIC_SITE_URL=https://yourdomain.com

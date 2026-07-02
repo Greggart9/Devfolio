@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section id="about" className="py-28 md:py-36 relative">
       <div className="blob bg-[#00ff88]/6 w-[450px] h-[450px] top-0 right-0"/>
-      <div className="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+      <div className="max-w-[1380px] mx-auto px-6 md:px-10 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* Portrait */}

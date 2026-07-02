@@ -3,7 +3,7 @@ export default function Services() {
   return (
     <section id="services" className="py-28 md:py-36 relative">
       <div className="blob bg-[#00ff88]/5 w-[500px] h-[500px] bottom-0 -left-40"/>
-      <div className="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+      <div className="max-w-[1380px] mx-auto px-6 md:px-10 relative z-10">
         <div className="reveal mb-14">
           <p className="text-[10px] font-mono text-[#00ff88] uppercase tracking-widest mb-3">// what I build</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold">MY <span className="g-text">SERVICES</span></h2>

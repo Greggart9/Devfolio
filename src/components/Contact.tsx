@@ -39,7 +39,7 @@ export default function Contact() {
       <div className="blob bg-[#00ff88]/10 w-[500px] h-[500px] -top-20 -left-20"/>
       <div className="blob bg-[#00c4ff]/6  w-[400px] h-[400px] -bottom-20 -right-10"/>
 
-      <div className="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+      <div className="max-w-[1380px] mx-auto px-6 md:px-10 relative z-10">
 
         <div className="reveal text-center mb-16">
           <p className="text-[10px] font-mono text-[#00ff88] uppercase tracking-widest mb-5">// let&apos;s talk</p>

@@ -4,7 +4,7 @@ export default function WhyMe() {
   return (
     <section id="why" className="py-28 md:py-36 relative">
       <div className="blob bg-[#00c4ff]/5 w-[450px] h-[450px] top-0 right-0"/>
-      <div className="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+      <div className="max-w-[1380px] mx-auto px-6 md:px-10 relative z-10">
 
         <div className="reveal mb-14">
           <p className="text-[10px] font-mono text-[#00ff88] uppercase tracking-widest mb-3">// differentiators</p>

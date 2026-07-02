@@ -140,6 +140,94 @@ export const projects: Project[] = [
     liveUrl:   "https://mygresume.vercel.app",
     githubUrl: "https://github.com/Greggart9/mygresume",
   },
+    {
+  slug: "zavian",
+  title: "Zavian",
+  tagline: "Your story, captured boldly.",
+  category: "Portfolio",
+  industry: "Photography / Creative Services / Personal Branding",
+  service: "Full-Stack Development & Creative Web Design",
+  year: "2026",
+  client: "Personal Project",
+  role: "Full-Stack Developer & UI Designer",
+  duration: "4 Weeks",
+
+  description:
+    "Zavian is a modern photography portfolio website designed to showcase editorial, portrait, fashion, and commercial photography through immersive visuals and smooth interactions. The website features full-screen project showcases, dynamic project pages, image galleries, before-and-after sliders, animated page transitions, blog content, and a contact experience for potential clients. Built with Next.js, TypeScript, GSAP, and Tailwind CSS, Zavian focuses on strong visual storytelling, responsive design, and a premium browsing experience across desktop, tablet, and mobile devices.",
+
+  challenge:
+    "Photography portfolios often rely on basic image grids that fail to communicate the personality, atmosphere, and creative direction behind each project. The challenge was to build a visually striking portfolio that gives every image enough space to stand out while still remaining fast, responsive, easy to navigate, and engaging across different screen sizes.",
+
+  solution:
+    "Zavian uses immersive full-screen imagery, stacked project sections, animated galleries, subtle page transitions, and reusable dynamic project pages to create a more cinematic portfolio experience. Each project is powered by structured data, allowing new case studies to be added without creating a separate page layout. Responsive layouts, optimized Next.js images, GSAP animations, and clear navigation ensure that the experience remains polished and accessible on mobile, tablet, and desktop.",
+
+  tags: [
+    "Next.js",
+    "TypeScript",
+    "GSAP",
+    "Tailwind CSS",
+  ],
+
+  cover: "/image/asset 80.png",
+  video: "https://res.cloudinary.com/degearesj/video/upload/v1782863648/zavian_nkygmg.mp4" ,
+  hero: "/image/asset 72.png",
+
+  screens: [
+    "/image/asset22.png",
+    "/image/asset24.png",
+    "/image/asset23.png",
+  ],
+
+  liveUrl: "https://zavian.vercel.app/",
+  githubUrl: "https://github.com/Greggart9/zavian",
+},
+
+{
+slug: "subscription-tracker-api",
+title: "Subscription Tracker API",
+tagline: "Track subscriptions and never miss a renewal.",
+category: "Backend Development",
+industry: "Fintech / Personal Finance / SaaS",
+service: "Backend API Development",
+year: "2026",
+client: "Personal Project",
+role: "Backend Developer",
+duration: "1 week",
+
+description:
+"Subscription Tracker API is a backend application designed to help users manage recurring subscriptions, monitor renewal dates, and receive automated reminders before upcoming payments. The API includes user authentication, protected routes, subscription ownership validation, automatic renewal-date calculation, email notifications, background workflows, request protection, and centralized error handling. It was built with Node.js, Express, MongoDB, Mongoose, JWT, Arcjet, Upstash Workflow, Nodemailer, and Day.js.",
+
+challenge:
+"Managing recurring subscriptions requires reliable authentication, accurate renewal tracking, secure access controls, and automated communication. The challenge was to build a backend system that could securely associate subscriptions with individual users, calculate renewal dates, protect sensitive endpoints, trigger scheduled workflows, and deliver reminder emails while remaining suitable for deployment on a managed cloud platform.",
+
+solution:
+"The API uses JWT authentication and authorization middleware to protect routes and ensure users can only access their own subscriptions. Mongoose models manage user and subscription data, while schema hooks calculate renewal dates based on billing frequency. Upstash Workflow handles scheduled reminder processes, Nodemailer delivers renewal emails, and Arcjet provides request protection and rate limiting. The application is deployed on Render and connected to MongoDB Atlas for persistent cloud storage.",
+
+tags: [
+"Node.js",
+"Express.js",
+"MongoDB",
+"Mongoose",
+"JWT",
+"Arcjet",
+"Upstash Workflow",
+"Nodemailer",
+],
+
+cover: "/image/subscription-tracker-cove.jpg",
+video: "",
+hero: "/image/asset26.jpg",
+
+screens: [
+"/image/asset26.jpg",
+"/image/asset25.jpg",
+"/image/asset26.jpg",
+],
+
+liveUrl: "https://subscription-tracker-api-7j9i.onrender.com/",
+githubUrl: "YOUR_GITHUB_REPOSITORY_URL",
+}
+
 ];
 
 export const services = [

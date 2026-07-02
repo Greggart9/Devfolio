@@ -38,7 +38,7 @@ export default function ProjectPage({ params }: Props) {
           <div className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#00ff88]/15 to-transparent animate-scan"/>
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-10 pb-16 pt-28 w-full">
+        <div className="relative z-10 max-w-[1380px] mx-auto px-6 md:px-10 pb-16 pt-28 w-full">
           <Link href="/" className="inline-flex items-center gap-2 text-[#444] hover:text-[#00ff88] text-sm font-mono transition-colors mb-10">
             ← cd ..
           </Link>
@@ -77,7 +77,7 @@ export default function ProjectPage({ params }: Props) {
 
       {/* ── Meta strip ── */}
       <section className="border-y border-[#1c1c24]">
-        <div className="max-w-6xl mx-auto px-6 md:px-10">
+        <div className="max-w-[1380px] mx-auto px-6 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-3 divide-x divide-[#1c1c24]">
             {[
               { label:"Client",   value: project.client   },
@@ -95,7 +95,7 @@ export default function ProjectPage({ params }: Props) {
 
       {/* ── Body ── */}
       <section className="py-20 md:py-28">
-        <div className="max-w-6xl mx-auto px-6 md:px-10">
+        <div className="max-w-[1380px] mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
 
             {/* Content */}
@@ -183,13 +183,13 @@ export default function ProjectPage({ params }: Props) {
       {/* ── More projects ── */}
       {others.length > 0 && (
         <section className="py-16 border-t border-[#1c1c24]">
-          <div className="max-w-6xl mx-auto px-6 md:px-10">
+          <div className="max-w-[1380px] mx-auto px-6 md:px-10">
             <h2 className="font-mono text-lg font-semibold text-[#00ff88] mb-8">// more projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {others.map(p => (
                 <Link key={p.slug} href={`/projects/${p.slug}`}
                   className="group relative rounded-2xl overflow-hidden bg-[#0e0e12] border border-[#1c1c24] hover:border-[#00ff88]/20 transition-colors lift block video-card"
-                  style={{ minHeight:"260px" }}
+                  style={{ minHeight:"400px" }}
                 >
                   <Image src={p.hero} alt={p.title} fill className="object-cover opacity-50 group-hover:opacity-80 transition-opacity duration-500" priority/>
                   <div className="absolute inset-0 bg-gradient-to-t from-[#060608]/90 to-transparent"/>
