@@ -12,7 +12,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const p = projects.find(p => p.slug === params.slug);
-  return { title: p ? `${p.title} — Alex Morgan` : "Not Found" };
+  return { title: p ? `${p.title} — Olúwadámiláre` : "Not Found" };
 }
 
 export default function ProjectPage({ params }: Props) {
