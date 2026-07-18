@@ -4,7 +4,7 @@ import { useState } from "react";
 const socials = [
   { label:"GitHub",      href:"https://github.com/Greggart9",      icon:"⌥" },
   { label:"Twitter / X", href:"https://x.com/Oluwad_amilare",           icon:"𝕏" },
-  { label:"LinkedIn",    href:"https://www.linkedin.com/in/oluwadamilaregreggart9/",     icon:"in" },
+  { label:"LinkedIn",    href:"https://www.linkedin.com/in/oluwadamilaree",     icon:"in" },
   { label:"Upwork",      href:"https://www.upwork.com/freelancers/~01f4206c2db39023fa",           icon:"U/" },
 ];
 
