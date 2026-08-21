@@ -259,7 +259,7 @@ export const faqs = [
 
 export const stats = [
   { value:3,  suffix:"+", label:"Years Experience" },
-  { value:18, suffix:"+",label:"GitHub Repos" },
+  { value:6, suffix:"+",label:"Projects" },
   { value:99, suffix:"%", label:"On-Time Delivery" },
 ];
 
@@ -272,7 +272,7 @@ export const testimonials = [
 export const brands = ["Vercel","Supabase","Cloudinary","Resend","Github","Neon","Upstash","Vscode","WordPress","Chatgpt","Claude ai"];
 
 export const skills = [
-  { label:"React / Next.js",  pct:96 },
+  { label:"React / Next.js",  pct:100 },
   { label:"TypeScript",       pct:93 },
   { label:"JavaScript",       pct:90 },
   { label:"CSS / Tailwind",   pct:98 },

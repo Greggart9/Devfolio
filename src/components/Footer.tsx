@@ -13,7 +13,7 @@ export default function Footer() {
           <div>
             <p className="text-[10px] font-mono text-[#333] uppercase tracking-widest mb-4">Navigate</p>
             <div className="flex flex-col gap-2.5">
-              {[["Home","/#hero"],["About","/#about"],["Projects","/#projects"],["Services","/#services"],["Contact","/#contact"]].map(([l,h])=>(
+              {[["Home","/#hero"],["About","/#about"],["Projects","/#projects"],["Skills","/#skills"],["Contact","/#contact"]].map(([l,h])=>(
                 <a key={h} href={h} className="text-[#555] hover:text-white text-sm transition-colors u-line font-mono">{l}</a>
               ))}
             </div>
@@ -21,7 +21,7 @@ export default function Footer() {
           <div>
             <p className="text-[10px] font-mono text-[#333] uppercase tracking-widest mb-4">Online</p>
             <div className="flex flex-col gap-2.5">
-              {[["GitHub","https://github.com/Greggart9"],["Twitter / X","https://x.com/Oluwad_amilare"],["LinkedIn","https://www.linkedin.com/in/oluwadamilaree/"],["Upwork","https://www.upwork.com/freelancers/~01f4206c2db39023fa"],["Contra","https://contra.com/oluwadamilare_ogundare_evytuaxa/work"]].map(([l,h])=>(
+              {[["GitHub","https://github.com/Greggart9"],["Twitter / X","https://x.com/Oluwad_amilare"],["LinkedIn","https://www.linkedin.com/in/oluwadamilaree/"],["Upwork","https://www.upwork.com/freelancers/~01f4206c2db39023fa"],["Resume","https://docs.google.com/document/d/15r1EynvQedLbK33Ajb6rcDsY7rWMPZUH"]].map(([l,h])=>(
                 <a key={h} href={h} target="_blank" rel="noreferrer" className="text-[#555] hover:text-white text-sm transition-colors u-line font-mono">{l}</a>
               ))}
             </div>

@@ -11,7 +11,7 @@ export default function About() {
           {/* Portrait */}
           <div className="reveal relative max-w-sm mx-auto lg:mx-0">
             <div className="rounded-2xl overflow-hidden zoom aspect-[3/4] border border-[#1c1c24]">
-              <Image src="https://res.cloudinary.com/degearesj/image/upload/v1773451178/profile_itdrww.jpg" alt="Olúwadámiláre Ogundare" fill className="object-cover"/>
+              <Image src="https://res.cloudinary.com/degearesj/image/upload/v1787267525/Pfp_grnrga.png" alt="Olúwadámiláre Ogundare" fill className="object-cover"/>
               <div className="absolute inset-0 bg-gradient-to-t from-[#060608]/60 to-transparent"/>
             </div>
             {/* Corner decoration */}
@@ -34,10 +34,10 @@ export default function About() {
             </div>
 
             <p className="text-[#666] leading-relaxed">
-              I&apos;m Olúwadámiláre Ogundare — a frontend engineer who believes the best code is the code you never have to explain. I care about performance, accessibility, and developer experience in equal measure.
+              I&apos;m Olúwadámiláre Ogundare — a Frontend Engineer who believes the best code is the code you never have to explain. I care about performance, accessibility, and developer experience in equal measure.
             </p>
             <p className="text-[#444] text-sm leading-relaxed">
-              I&apos;ve built and shipped a range of projects — from fintech-style dashboards to Web3 interfaces and experimental tools. I write in TypeScript, think in systems, and ship on Fridays.
+              I've architected and built a range of complex applications - from fintech-style dashboards to Web3 interfaces and experimental tools. I write in TypeScript, think in systems, and ship on Fridays.
             </p>
 
             {/* Skill bars */}
@@ -55,7 +55,7 @@ export default function About() {
               ))}
             </div>
 
-            <a href="/#contact" className="inline-flex items-center gap-2 btn-shimmer px-7 py-3.5 rounded-full text-sm font-mono mt-2">$ work with me →</a>
+            <a href="" className="inline-flex items-center gap-2 btn-shimmer px-7 py-3.5 rounded-full text-sm font-mono mt-2">$ View resume</a>
           </div>
         </div>
       </div>

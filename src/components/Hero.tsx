@@ -46,18 +46,16 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
           {/* Left */}
-          <div>
+          <div className="pt-10">
             {/* Status badge */}
             <div className={`inline-flex items-center gap-2 border border-[#00ff88]/25 bg-[#00ff88]/5 rounded-full px-4 py-1.5 mb-7 transition-all duration-700 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-4"}`}>
               <span className="w-1.5 h-1.5 rounded-full bg-[#00ff88] animate-glow"/>
-              <span className="text-[#00ff88] text-xs font-mono">Open to work · Remote-friendly</span>
+              <span className="text-[#00ff88] text-xs font-mono">Available for Full-Time Roles</span>
             </div>
 
-            <h1 className={`font-display text-[clamp(2.6rem,5.5vw,5rem)] font-bold leading-[1.0] tracking-tight mb-5 transition-all duration-700 delay-100 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-6"}`}>
-              FRONTEND<br/>
-              <span className="g-text">DEVELOPER</span><br/>
-              BUILDING FOR<br/>
-              THE WEB
+            <h1 className={`font-display text-[clamp(2rem,4.2vw,4.5rem)] font-bold leading-[1.1] tracking-tight mb-5 transition-all duration-700 delay-100 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-6"}`}>
+              CRAFTING <span className="g-text">HIGH-PERFORMANCE</span><br/>
+              WEB EXPERIENCES
             </h1>
 
             <div className={`flex items-center gap-2 mb-7 transition-all duration-700 delay-200 ${show?"opacity-100":"opacity-0"}`}>
@@ -65,18 +63,18 @@ export default function Hero() {
               <span key={idx} className="text-[#00c4ff] text-sm font-mono animate-fade-in">{roles[idx]}</span>
             </div>
 
-            <p className={`text-[#666] text-base md:text-lg leading-relaxed max-w-xl mb-9 transition-all duration-700 delay-300 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-6"}`}>
-              I&apos;m Olúwadámiláre Ogundare, a frontend engineer with 3+ years of experience building fast, scalable web applications. I'm currently deepening my skills in backend development to grow into a full-stack role, while bringing the same focus on clean, maintainable solutions to every layer of the stack.
-            </p>
+            {/* <p className={`text-[#666] text-base md:text-lg leading-relaxed max-w-xl mb-9 transition-all duration-700 delay-300 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-6"}`}>
+              I'm Olúwadámiláre, a frontend engineer with 3+ years of experience building fast, scalable web applications. I bridge the gap between design and robust architecture, using my knowledge of backend systems to build cleaner, more integrated, and maintainable user interfaces.
+            </p> */}
 
             <div className={`flex flex-wrap gap-4 mb-12 transition-all duration-700 delay-400 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-6"}`}>
-              <a href="/#contact" className="btn-shimmer px-7 py-3.5 rounded-full text-sm font-mono">$ hire me →</a>
+              <a href="/#contact" className="btn-shimmer px-7 py-3.5 rounded-full text-sm font-mono">$ Let's connect</a>
               <a href="/#projects" className="btn-outline px-7 py-3.5 rounded-full text-sm font-mono">view projects</a>
             </div>
 
             {/* Stats */}
             <div className={`flex gap-10 transition-all duration-700 delay-500 ${show?"opacity-100":"opacity-0"}`}>
-              {[["3+","Years"],["18+","Repos"],["99%","Delivery"]].map(([v,l])=>(
+              {[["3+","Years"],["6+","Projects"],["99%","Delivery"]].map(([v,l])=>(
                 <div key={l}>
                   <div className="font-display text-2xl font-bold g-text">{v}</div>
                   <div className="text-[#333] text-xs mt-0.5 font-mono">{l}</div>

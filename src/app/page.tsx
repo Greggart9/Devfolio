@@ -3,7 +3,7 @@ import Brands       from "@/components/Brands";
 import About        from "@/components/About";
 import Stats        from "@/components/Stats";
 import Projects     from "@/components/Projects";
-import Services     from "@/components/Services";
+import Services     from "@/components/Skills";
 import WhyMe        from "@/components/WhyMe";
 import Testimonials from "@/components/Testimonials";
 import FAQ          from "@/components/FAQ";
