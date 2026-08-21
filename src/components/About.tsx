@@ -55,7 +55,7 @@ export default function About() {
               ))}
             </div>
 
-            <a href="" className="inline-flex items-center gap-2 btn-shimmer px-7 py-3.5 rounded-full text-sm font-mono mt-2">$ View resume</a>
+            <a href="https://docs.google.com/document/d/15r1EynvQedLbK33Ajb6rcDsY7rWMPZUH" className="inline-flex items-center gap-2 btn-shimmer px-7 py-3.5 rounded-full text-sm font-mono mt-2">$ View resume</a>
           </div>
         </div>
       </div>
