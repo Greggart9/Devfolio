@@ -39,8 +39,8 @@ export default function Hero() {
       <div className="blob bg-[var(--accent2)]/10  w-[400px] h-[400px] -bottom-20 -right-20"/>
 
       {/* Decorative rings */}
-      <div className="absolute top-28 right-16 md:right-28 w-28 h-28 rounded-full border border-[var(--accent)]/40 animate-spin-slow"/>
-      <div className="absolute top-32 right-20 md:right-32 w-16 h-16 rounded-full border border-[var(--accent2)]/40 animate-spin-slow" style={{animationDirection:"reverse",animationDuration:"13s"}}/>
+      <div className="hidden sm:block absolute top-28 right-16 md:right-28 w-28 h-28 rounded-full border border-[var(--accent)]/40 animate-spin-slow"/>
+      <div className="hidden sm:block absolute top-32 right-20 md:right-32 w-16 h-16 rounded-full border border-[var(--accent2)]/40 animate-spin-slow" style={{animationDirection:"reverse",animationDuration:"13s"}}/>
 
       <div className="relative z-10 max-w-[1380px] mx-auto px-6 md:px-10 w-full py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -53,7 +53,7 @@ export default function Hero() {
               <span className="text-[var(--accent)] text-xs font-mono">Available for Full-Time Roles</span>
             </div>
 
-            <h1 className={`font-display text-[clamp(2rem,4.2vw,4.5rem)] font-bold leading-[1.1] tracking-tight mb-5 transition-all duration-700 delay-100 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-6"}`}>
+            <h1 className={`font-display text-[clamp(2.5rem,4.2vw,6rem)] font-bold leading-[1.1] tracking-tight mb-5 transition-all duration-700 delay-100 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-6"}`}>
               CRAFTING <span className="g-text">HIGH-PERFORMANCE</span><br/>
               WEB EXPERIENCES
             </h1>
@@ -67,13 +67,13 @@ export default function Hero() {
               I'm Olúwadámiláre, a frontend engineer with 3+ years of experience building fast, scalable web applications. I bridge the gap between design and robust architecture, using my knowledge of backend systems to build cleaner, more integrated, and maintainable user interfaces.
             </p> */}
 
-            <div className={`flex flex-wrap gap-4 mb-12 transition-all duration-700 delay-400 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-6"}`}>
-              <a href="/#contact" className="btn-shimmer px-7 py-3.5 rounded-full text-sm font-mono transition-all duration-100 active:scale-95 hover:shadow-lg hover:shadow-[var(--accent)]/20">$ Let's connect</a>
-              <a href="/#projects" className="btn-outline px-7 py-3.5 rounded-full text-sm font-mono transition-all duration-200 active:scale-95 hover:shadow-lg hover:shadow-[var(--accent)]/10">view projects</a>
+            <div className={`flex flex-col md:flex md:flex-wrap gap-4 mb-12 transition-all duration-700 delay-400 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-6"}`}>
+              <a href="/#contact" className="btn-shimmer mt-10 md:mt-0 px-7 py-3.5 rounded-full text-center text-sm font-mono transition-all duration-100 active:scale-95 hover:shadow-lg hover:shadow-[var(--accent)]/20">$ Let's connect</a>
+              <a href="/#projects" className="btn-outline px-7 py-3.5 rounded-full text-center text-sm font-mono transition-all duration-200 active:scale-95 hover:shadow-lg hover:shadow-[var(--accent)]/10">view projects</a>
             </div>
 
             {/* Stats */}
-            <div className={`flex gap-10 transition-all duration-700 delay-500 ${show?"opacity-100":"opacity-0"}`}>
+            <div className={`flex gap-10 justify-center lg:justify-start w-fulltransition-all duration-700 delay-500 ${show?"opacity-100":"opacity-0"}`}>
               {[["3+","Years"],["6+","Projects"],["99%","Delivery"]].map(([v,l])=>(
                 <div key={l}>
                   <div className="font-display text-2xl font-bold g-text">{v}</div>

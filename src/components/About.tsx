@@ -6,7 +6,7 @@ export default function About() {
     <section id="about" className="py-28 md:py-36 relative">
       <div className="blob bg-[var(--accent)]/6 w-[450px] h-[450px] top-0 right-0"/>
       <div className="max-w-[1380px] mx-auto px-6 md:px-10 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-w-0">
 
           {/* Portrait */}
           <div className="reveal relative max-w-sm mx-auto lg:mx-0">
@@ -25,7 +25,7 @@ export default function About() {
           </div>
 
           {/* Text */}
-          <div className="reveal d2 space-y-6">
+          <div className="reveal d2 min-w-0 space-y-6 break-words">
             <div>
               <p className="text-[10px] font-mono text-[var(--accent)] uppercase tracking-widest mb-3">// about me</p>
               <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
@@ -33,10 +33,10 @@ export default function About() {
               </h2>
             </div>
 
-            <p className="text-[var(--color-text-tertiary)] leading-relaxed">
+            <p className="text-[var(--color-text-tertiary)] leading-relaxed [overflow-wrap:anywhere]">
               I&apos;m Olúwadámiláre Ogundare — a Frontend Engineer who believes the best code is the code you never have to explain. I care about performance, accessibility, and developer experience in equal measure.
             </p>
-            <p className="text-[var(--color-fade-text)] text-sm leading-relaxed">
+            <p className="text-[var(--color-fade-text)] text-sm leading-relaxed [overflow-wrap:anywhere]">
               I've architected and built a range of complex applications - from fintech-style dashboards to Web3 interfaces and experimental tools. I write in TypeScript, think in systems, and ship on Fridays.
             </p>
 

@@ -33,17 +33,26 @@ export default function Navbar() {
           <a href="/#contact" className="btn-shimmer px-5 py-2.5 rounded-full text-sm font-mono">$ Let's connect</a>
         </div>
 
-        <button className="md:hidden flex flex-col gap-1.5 p-2" onClick={()=>setOpen(!open)}>
-          <span className={`w-5 h-px bg-white transition-all duration-300 ${open?"rotate-45 translate-y-[6px]":""}`}/>
-          <span className={`w-5 h-px bg-white transition-all duration-300 ${open?"opacity-0":""}`}/>
-          <span className={`w-5 h-px bg-white transition-all duration-300 ${open?"-rotate-45 -translate-y-[6px]":""}`}/>
-        </button>
+        <div className="md:hidden flex items-center gap-3">
+          <ThemeToggle />
+          <button
+            type="button"
+            className="flex flex-col gap-1.5 p-2 text-[var(--color-text-primary)]"
+            onClick={()=>setOpen(!open)}
+            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={open}
+          >
+            <span className={`w-5 h-px bg-current transition-all duration-300 ${open?"rotate-45 translate-y-[6px]":""}`}/>
+            <span className={`w-5 h-px bg-current transition-all duration-300 ${open?"opacity-0":""}`}/>
+            <span className={`w-5 h-px bg-current transition-all duration-300 ${open?"-rotate-45 -translate-y-[6px]":""}`}/>
+          </button>
+        </div>
       </div>
 
-      <div className={`md:hidden overflow-hidden transition-all duration-300 border-b border-[#1c1c24] bg-[#060608] ${open?"max-h-80":"max-h-0"}`}>
+      <div className={`md:hidden overflow-hidden transition-all duration-300 border-b border-[var(--color-border)] bg-[var(--color-bg-primary)] ${open?"max-h-80":"max-h-0"}`}>
         <nav className="flex flex-col gap-1 px-6 py-4">
           {links.map(([l,h,blank], i)=>(
-            <a key={h} href={h} onClick={()=>setOpen(false)} {...(blank?{target:"_blank",rel:"noopener noreferrer"}:{})} className="py-3 text-[#666] hover:text-white text-sm border-b border-[#111] transition-all duration-200 font-mono opacity-0 animate-slide-up" style={{animationDelay: `${i * 50}ms`, animationFillMode: 'forwards'}}>{l}</a>
+            <a key={h} href={h} onClick={()=>setOpen(false)} {...(blank?{target:"_blank",rel:"noopener noreferrer"}:{})} className="py-3 text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] text-sm border-b border-[var(--color-border)] transition-all duration-200 font-mono opacity-0 animate-slide-up" style={{animationDelay: `${i * 50}ms`, animationFillMode: 'forwards'}}>{l}</a>
           ))}
           <a href="https://docs.google.com/document/d/15r1EynvQedLbK33Ajb6rcDsY7rWMPZUH" target="_blank" rel="noopener noreferrer" onClick={()=>setOpen(false)} className="mt-3 btn-shimmer py-3 rounded-full text-center text-sm font-mono opacity-0 animate-slide-up" style={{animationDelay: `${links.length * 50}ms`, animationFillMode: 'forwards'}}>$ View resume</a>
         </nav>

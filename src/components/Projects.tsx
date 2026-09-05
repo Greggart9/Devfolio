@@ -36,14 +36,14 @@ export default function Projects() {
 
               {/* Bottom */}
               <div className="absolute bottom-0 left-0 right-0 p-7 translate-y-1 group-hover:translate-y-0 transition-transform duration-300">
-                 <p className="text-[var(--color-purple-accent)] text-xs font-mono mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-50">{p.tagline}</p>
-                <h3 className="font-display text-3xl font-bold text-white mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">{p.title}</h3>
-                <div className="flex flex-wrap gap-2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">
+                <p className="text-[var(--color-purple-accent)] text-xs font-mono mb-2 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-50">{p.tagline}</p>
+                <h3 className="font-display text-3xl font-bold text-white mb-3 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">{p.title}</h3>
+                <div className="flex flex-wrap gap-2 mb-4 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">
                   {p.tags.slice(0,3).map(t => (
                     <span key={t} className="text-[10px] font-mono border border-white/10 text-white/50 px-2 py-0.5 rounded-full">{t}</span>
                   ))}
                 </div>
-                <div className="flex items-center gap-2 text-[var(--color-purple-accent)] text-sm font-mono opacity-0 group-hover:opacity-100 transition-all duration-300 delay-200 translate-x-0 group-hover:translate-x-1">
+                <div className="flex items-center gap-2 text-[var(--color-purple-accent)] text-sm font-mono opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 delay-200 translate-x-0 group-hover:translate-x-1">
                   <span>View project</span>
                   <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                 </div>
