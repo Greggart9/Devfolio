@@ -9,10 +9,10 @@ export default function Projects() {
 
         <div className="reveal flex flex-col md:flex-row md:items-end justify-between gap-5 mb-14">
           <div>
-            <p className="text-[10px] font-mono text-[#7C5CFC] uppercase tracking-widest mb-3">Selected Work</p>
+              <p className="text-[10px] font-mono text-[var(--color-purple-accent)] uppercase tracking-widest mb-3">Selected Work</p>
             <h2 className="font-display text-4xl md:text-5xl font-bold">SELECTED <span className="g-text">PROJECTS</span></h2>
           </div>
-          <p className="text-[#555] text-sm max-w-xs leading-relaxed">I&apos;ve developed web apps, web sites, and digital experiences for clients. Here are some standout examples.</p>
+          <p className="text-[var(--color-text-muted)] text-sm max-w-xs leading-relaxed">I&apos;ve developed web apps, web sites, and digital experiences for clients. Here are some standout examples.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -36,16 +36,16 @@ export default function Projects() {
 
               {/* Bottom */}
               <div className="absolute bottom-0 left-0 right-0 p-7 translate-y-1 group-hover:translate-y-0 transition-transform duration-300">
-                <p className="text-[#C084FC] text-xs font-mono mb-2">{p.tagline}</p>
-                <h3 className="font-display text-3xl font-bold text-white mb-3">{p.title}</h3>
-                <div className="flex flex-wrap gap-2 mb-4">
+                 <p className="text-[var(--color-purple-accent)] text-xs font-mono mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-50">{p.tagline}</p>
+                <h3 className="font-display text-3xl font-bold text-white mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">{p.title}</h3>
+                <div className="flex flex-wrap gap-2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">
                   {p.tags.slice(0,3).map(t => (
                     <span key={t} className="text-[10px] font-mono border border-white/10 text-white/50 px-2 py-0.5 rounded-full">{t}</span>
                   ))}
                 </div>
-                <div className="flex items-center gap-2 text-[#C084FC] text-sm font-mono opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="flex items-center gap-2 text-[var(--color-purple-accent)] text-sm font-mono opacity-0 group-hover:opacity-100 transition-all duration-300 delay-200 translate-x-0 group-hover:translate-x-1">
                   <span>View project</span>
-                  <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                 </div>
               </div>
             </Link>

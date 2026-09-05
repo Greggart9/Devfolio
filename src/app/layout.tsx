@@ -4,6 +4,7 @@ import Cursor from "@/components/Cursor";
 import Reveal from "@/components/Reveal";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
@@ -46,11 +47,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Cursor />
-        <Reveal />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <Cursor />
+          <Reveal />
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -13,15 +13,15 @@ function Counter({ end, suffix }: { end:number; suffix:string }) {
 
 export default function Stats() {
   return (
-    <section className="py-20 border-y border-[#1c1c24]">
+    <section className="py-20 border-y border-[var(--color-border)]">
       <div className="max-w-[1380px] mx-auto px-6 md:px-10">
-        <div className="grid  md:grid-cols-3 gap-8 md:gap-0 md:divide-x divide-[#1c1c24]">
+        <div className="grid  md:grid-cols-3 gap-8 md:gap-0 md:divide-x divide-[var(--color-border)]">
           {stats.map(s=>(
             <div key={s.label} className="md:px-10 first:pl-0 last:pr-0 text-center md:text-left">
               <div className="font-display text-5xl md:text-6xl font-bold g-text mb-2">
                 <Counter end={s.value} suffix={s.suffix}/>
               </div>
-              <p className="text-[#333] text-sm font-mono">{s.label}</p>
+              <p className="text-[var(--color-subtle)] text-sm font-mono">{s.label}</p>
             </div>
           ))}
         </div>

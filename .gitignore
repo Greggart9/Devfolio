@@ -1,4 +1,8 @@
 node_modules
 
+# Local Copilot/agent skills
+.agents/
+skills-lock.json
+
 # Next.js build output
 .next/

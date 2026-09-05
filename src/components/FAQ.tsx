@@ -12,11 +12,11 @@ export default function FAQ() {
 
           {/* Left sticky */}
           <div className="reveal lg:sticky lg:top-28">
-            <p className="text-[10px] font-mono text-[#00ff88] uppercase tracking-widest mb-3">// got questions?</p>
+            <p className="text-[10px] font-mono text-[var(--accent)] uppercase tracking-widest mb-3">// got questions?</p>
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-5">
               FREQUENTLY<br/><span className="g-text">ASKED</span>
             </h2>
-            <p className="text-[#444] text-sm leading-relaxed max-w-sm mb-7 font-mono">
+            <p className="text-[var(--color-fade-text)] text-sm leading-relaxed max-w-sm mb-7 font-mono">
               Things people ask before hiring me. Still have questions?
             </p>
             <a
@@ -30,29 +30,29 @@ export default function FAQ() {
           {/* Right accordion */}
           <div className="reveal d2">
             {faqs.map((faq, i) => (
-              <div key={i} className="border-b border-[#111]">
+              <div key={i} className="border-b border-[var(--color-border)]">
                 <button
                   onClick={() => setOpen(open === i ? null : i)}
-                  className="w-full flex items-center justify-between py-5 text-left group"
+                  className="w-full flex items-center justify-between py-5 text-left group transition-all duration-200 active:scale-98"
                 >
                   <div className="flex items-center gap-4">
-                    <span className="text-[10px] font-mono text-[#00ff88] w-6 flex-shrink-0">
+                    <span className="text-[10px] font-mono text-[var(--accent)] w-6 flex-shrink-0">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span className={`text-sm md:text-base font-medium transition-colors font-mono ${
-                      open === i ? "text-[#00ff88]" : "text-white group-hover:text-[#00ff88]"
+                      open === i ? "text-[var(--accent)]" : "text-[var(--color-text-primary)] group-hover:text-[var(--accent)]"
                     }`}>
                       {faq.q}
                     </span>
                   </div>
-                  <span className={`text-xl text-[#333] flex-shrink-0 ml-4 transition-transform duration-300 font-mono ${
-                    open === i ? "rotate-45 text-[#00ff88]" : ""
+                  <span className={`text-xl text-[var(--color-subtle)] flex-shrink-0 ml-4 transition-transform duration-300 font-mono ${
+                    open === i ? "rotate-45 text-[var(--accent)]" : ""
                   }`}>
                     +
                   </span>
                 </button>
                 <div className={`faq-body ${open === i ? "open" : ""}`}>
-                  <p className="text-[#444] text-sm leading-relaxed pb-5 pl-10 font-mono">{faq.a}</p>
+                  <p className="text-[var(--color-fade-text)] text-sm leading-relaxed pb-5 pl-10 font-mono">{faq.a}</p>
                 </div>
               </div>
             ))}
