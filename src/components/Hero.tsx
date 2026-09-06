@@ -67,7 +67,7 @@ export default function Hero() {
               I'm Olúwadámiláre, a frontend engineer with 3+ years of experience building fast, scalable web applications. I bridge the gap between design and robust architecture, using my knowledge of backend systems to build cleaner, more integrated, and maintainable user interfaces.
             </p> */}
 
-            <div className={`flex flex-col md:flex md:flex-wrap gap-4 mb-12 transition-all duration-700 delay-400 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-6"}`}>
+            <div className={`flex flex-col md:flex-row md:flex-wrap gap-4 mb-12 transition-all duration-700 delay-400 ${show?"opacity-100 translate-y-0":"opacity-0 translate-y-6"}`}>
               <a href="/#contact" className="btn-shimmer mt-10 md:mt-0 px-7 py-3.5 rounded-full text-center text-sm font-mono transition-all duration-100 active:scale-95 hover:shadow-lg hover:shadow-[var(--accent)]/20">$ Let's connect</a>
               <a href="/#projects" className="btn-outline px-7 py-3.5 rounded-full text-center text-sm font-mono transition-all duration-200 active:scale-95 hover:shadow-lg hover:shadow-[var(--accent)]/10">view projects</a>
             </div>
