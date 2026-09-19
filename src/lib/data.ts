@@ -50,7 +50,7 @@ export const projects: Project[] = [
       "/image/asset2.png",
       "/image/asset3.png",
     ],
-    liveUrl:   "https://ecommerce9.vercel.app/",
+    liveUrl:   "https://essential.oluwadamilare.xyz/",
     githubUrl: "https://github.com/Greggart9/ecommerce",
   },
   {
@@ -79,7 +79,7 @@ export const projects: Project[] = [
       "/image/asset7.png",
       "/image/asset8.png",
     ],
-    liveUrl:   "https://gregatek.vercel.app/",
+    liveUrl:   "https://gregatek.oluwadamilare.xyz/",
     githubUrl: "https://github.com/Greggart9/gregatek",
   },
   {
@@ -108,7 +108,7 @@ export const projects: Project[] = [
       "/image/asset11.png",
       "/image/asset12.png",
     ],
-    liveUrl:   "https://gregtodo.vercel.app/",
+    liveUrl:   "https://gregtodo.oluwadamilare.xyz/",
     githubUrl: "https://github.com/Greggart9/gregtodo",
   },
   {
@@ -137,7 +137,7 @@ export const projects: Project[] = [
       "/image/asset20.png",
       "/image/asset21.png",
     ],
-    liveUrl:   "https://mygresume.vercel.app",
+    liveUrl:   "https://mygresume.oluwadamilare.xyz/",
     githubUrl: "https://github.com/Greggart9/mygresume",
   },
     {
@@ -178,7 +178,7 @@ export const projects: Project[] = [
     "/image/asset23.png",
   ],
 
-  liveUrl: "https://zavian.vercel.app/",
+  liveUrl: "https://zavian.oluwadamilare.xyz/",
   githubUrl: "https://github.com/Greggart9/zavian",
 },
 
