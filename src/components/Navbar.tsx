@@ -54,7 +54,7 @@ export default function Navbar() {
           {links.map(([l,h,blank], i)=>(
             <a key={h} href={h} onClick={()=>setOpen(false)} {...(blank?{target:"_blank",rel:"noopener noreferrer"}:{})} className="py-3 text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] text-sm border-b border-[var(--color-border)] transition-all duration-200 font-mono opacity-0 animate-slide-up" style={{animationDelay: `${i * 50}ms`, animationFillMode: 'forwards'}}>{l}</a>
           ))}
-          <a href="https://docs.google.com/document/d/15r1EynvQedLbK33Ajb6rcDsY7rWMPZUH" target="_blank" rel="noopener noreferrer" onClick={()=>setOpen(false)} className="mt-3 btn-shimmer py-3 rounded-full text-center text-sm font-mono opacity-0 animate-slide-up" style={{animationDelay: `${links.length * 50}ms`, animationFillMode: 'forwards'}}>$ View resume</a>
+          <a href="https://docs.google.com/document/d/1-ueGgt97JmLLSbXA332Heyxcb5Q2HGiqcsIMSbmqOhg/edit?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={()=>setOpen(false)} className="mt-3 btn-shimmer py-3 rounded-full text-center text-sm font-mono opacity-0 animate-slide-up" style={{animationDelay: `${links.length * 50}ms`, animationFillMode: 'forwards'}}>$ View resume</a>
         </nav>
       </div>
     </header>
