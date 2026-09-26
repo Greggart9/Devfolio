@@ -25,6 +25,36 @@ export interface Project {
 // Using Mixkit free stock videos (no auth, CORS-open CDN)
 export const projects: Project[] = [
   {
+    slug:     "aldena",
+    title:    "ALDENA",
+    tagline:  "Creative Agency",
+    category: "Website",
+    industry: "Creative / Design Agency",
+    service:  "Frontend Development",
+    year:     "2026",
+    client:   "Personal Project",
+    role:     "Frontend Developer & UI Designer",
+    duration: "1 Weeks",
+    description:
+      "Aldena is an editorial-grade creative agency platform designed to showcase brand identities, digital products, and design systems through interactive card stacks, fluid typography, and scroll-driven micro-interactions.",
+    challenge:
+      "Creating an ultra-refined design agency site that blends heavy editorial typography with complex scroll animations without compromising performance, mobile responsiveness, or accessibility across viewports.",
+    solution:
+      "Built with Next.js App Router, TypeScript, and Tailwind CSS. Integrated GSAP ScrollTrigger for pinned interactive testimonial card stacks, custom drop-text scroll effects, marquee logo tickers, dynamic project slug routes, and responsive grid layouts.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Framer Motion", "Lucide React", "Vercel"],
+    cover:   "https://res.cloudinary.com/degearesj/image/upload/v1790435878/asset2_o9qubq.png",
+    video:   "https://res.cloudinary.com/degearesj/video/upload/v1790436508/aldena_ffu2lq.mp4",
+    hero:    "https://res.cloudinary.com/degearesj/image/upload/v1790435878/asset2_o9qubq.png",
+    screens: [
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80&fit=crop",
+      "/image/asset29.png",
+      "/image/asset30.png",
+    ],
+    liveUrl:   "https://aldena.oluwadamilare.xyz/",
+    githubUrl: "https://github.com/Greggart9/Aldena",
+  },
+
+  {
     slug:     "essential",
     title:    "ESSENTIAL",
     tagline:  "Full-Stack E-Commerce & Content Platform",
