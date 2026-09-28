@@ -8,7 +8,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   useEffect(()=>{ const fn=()=>setScrolled(window.scrollY>30); window.addEventListener("scroll",fn); return()=>window.removeEventListener("scroll",fn); },[]);
 
-  const links: [string, string, boolean?][] = [["Home","/#hero"],["About","/#about"],["Projects","/#projects"],["Skills","/#skills"],["Resume","https://docs.google.com/document/d/15r1EynvQedLbK33Ajb6rcDsY7rWMPZUH",true],["FAQ","/#faq"]];
+  const links: [string, string, boolean?][] = [["Home","/#hero"],["About","/#about"],["Projects","/#projects"],["Skills","/#skills"],["Resume","https://docs.google.com/document/d/1-ueGgt97JmLLSbXA332Heyxcb5Q2HGiqcsIMSbmqOhg/edit?usp=sharing",true],["FAQ","/#faq"]];
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled?"bg-[var(--color-bg-primary)]/92 backdrop-blur-xl border-b border-[var(--color-border)]":""}`}>
