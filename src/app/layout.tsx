@@ -16,10 +16,10 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
-  title: "Olúwadámiláre Ogundare — Senior Frontend Engineer",
+  title: "Olúwadámiláre Ogundare | Frontend Developer",
   description:
-    "Frontend engineer specialising in React, Next.js, 3D web experiences, and high-performance applications. 3+ years, 38+ projects shipped.",
-  icons: {
+    "Frontend Developer specialising in React, Next.js,TypeScript and high-performance applications.",
+  icons: { 
     icon: [
       { url: "/alien-monster.svg", type: "image/svg+xml" },
     ],
@@ -29,13 +29,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: BASE_URL,
-    title: "Olúwadámiláre Ogundare — Senior Frontend Engineer",
+    title: "Olúwadámiláre Ogundare | Frontend Developer",
     description:
-      "Frontend engineer specialising in React, Next.js, and high-performance web applications.",
+      "Frontend Developer specialising in React, Next.js,TypeScript and high-performance applications.",
     siteName: "Olúwadámiláre Ogundare",
     images: [
       {
-        url: "/api/og",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Olúwadámiláre Ogundare — Frontend Developer",
@@ -44,10 +44,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Olúwadámiláre Ogundare — Senior Frontend Engineer",
+    title: "Olúwadámiláre Ogundare | Frontend Developer",
     description:
-      "Frontend engineer specialising in React, Next.js, and high-performance web applications.",
-    images: ["/api/og"],
+      "Frontend Developer specialising in React, Next.js,TypeScript and high-performance applications.",
+    images: ["/opengraph-image.png"],
     creator: "@Oluwad_amilare",
   },
 };
