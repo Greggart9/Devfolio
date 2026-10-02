@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-type Theme = "dark" | "light";
+type Theme = "light";
 
 interface ThemeContextType {
   theme: Theme;
@@ -12,24 +12,15 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme] = useState<Theme>("light");
 
-  // Load theme from localStorage on mount
   useEffect(() => {
-    const stored = localStorage.getItem("theme") as Theme | null;
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initialTheme = stored || (prefersDark ? "dark" : "light");
-    setTheme(initialTheme);
-    document.documentElement.setAttribute("data-theme", initialTheme);
+    document.documentElement.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
   }, []);
 
   const toggleTheme = () => {
-    setTheme((prev) => {
-      const newTheme = prev === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", newTheme);
-      localStorage.setItem("theme", newTheme);
-      return newTheme;
-    });
+    // Light mode is mandatory
   };
 
   return (
@@ -46,3 +37,4 @@ export function useTheme() {
   }
   return context;
 }
+
