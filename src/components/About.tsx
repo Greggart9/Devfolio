@@ -91,7 +91,7 @@ export default function About() {
 
             <FadeUp delay={0.34} y={15}>
               <p className="text-slate-600 text-sm md:text-[15px] leading-relaxed">
-                My focus is on modern web development. I’ve spent the last few years developing different types of web applications. I thrive on the technical challenges of the frontend, whether that means optimizing Core Web Vitals under the hood or ensuring a complex UI is perfectly responsive.
+                My focus is on modern web development. I’ve spent the last few years developing different types of web applications. I thrive on the technical challenges of the frontend, whether that means optimizing Core Web Vitals under the hood or ensuring a complex UI is perfectly responsive. 
               </p>
             </FadeUp>
 
