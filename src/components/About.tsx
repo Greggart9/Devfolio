@@ -85,13 +85,13 @@ export default function About() {
 
             <FadeUp delay={0.28} y={15}>
               <p className="text-slate-800 text-base md:text-lg leading-relaxed font-medium">
-                I'm Olúwadámiláre Ogundare — a Frontend Engineer dedicated to building interfaces that look incredible and load instantly. I bridge design aesthetics with scalable engineering.
-              </p>
+               I’m Olúwadámiláre, a frontend developer focused on building visually engaging, high-performance web applications. I bridge design aesthetics with solid technical execution.
+              </p> 
             </FadeUp>
 
             <FadeUp delay={0.34} y={15}>
               <p className="text-slate-600 text-sm md:text-[15px] leading-relaxed">
-                Over the last 3+ years, I've engineered full-stack SaaS applications, e-commerce storefronts, AI resume platforms, and creative agency sites. I build with Next.js, write strictly typed TypeScript, and optimize for Core Web Vitals.
+                My focus is on modern web development. I’ve spent the last few years developing different types of web applications. I thrive on the technical challenges of the frontend, whether that means optimizing Core Web Vitals under the hood or ensuring a complex UI is perfectly responsive.
               </p>
             </FadeUp>
 
