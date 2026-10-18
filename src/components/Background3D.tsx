@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useMemo, useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Float, MeshDistortMaterial, Points, PointMaterial } from "@react-three/drei";
 import * as THREE from "three";
@@ -69,12 +70,14 @@ function ParticleField() {
 }
 
 export default function Background3D() {
+  const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
+  if (pathname?.startsWith("/admin")) return null;
   if (!mounted) return null;
 
   return (

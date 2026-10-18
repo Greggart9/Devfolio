@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { projects } from "@/lib/data";
+import { getProjects, getProjectBySlug } from "@/lib/data-service";
 import ProjectDetail from "@/components/ProjectDetail";
 
 interface Props {
@@ -8,26 +8,34 @@ interface Props {
 }
 
 export async function generateStaticParams() {
+  const projects = await getProjects();
   return projects.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const p = projects.find((item) => item.slug === params.slug);
+  const p = await getProjectBySlug(params.slug);
   return {
-    title: p ? `${p.title} — Olúwadámiláre` : "Project Not Found",
+    title: p ? `${p.title} - Olúwadámiláre` : "Project Not Found",
     description: p ? p.description : "Project detail showcase",
   };
 }
 
-export default function ProjectPage({ params }: Props) {
-  const projectIndex = projects.findIndex((p) => p.slug === params.slug);
-  if (projectIndex === -1) notFound();
+export default async function ProjectPage({ params }: Props) {
+  const [allProjects, project] = await Promise.all([
+    getProjects(),
+    getProjectBySlug(params.slug),
+  ]);
 
-  const project = projects[projectIndex];
-  const moreProjects = [
-    projects[(projectIndex + 1) % projects.length],
-    projects[(projectIndex + 2) % projects.length],
-  ];
+  if (!project) notFound();
+
+  const projectIndex = allProjects.findIndex((p) => p.slug === params.slug);
+  const moreProjects =
+    allProjects.length > 1
+      ? [
+          allProjects[(projectIndex + 1) % allProjects.length],
+          allProjects[(projectIndex + 2) % allProjects.length],
+        ].filter(Boolean)
+      : [];
 
   return (
     <ProjectDetail

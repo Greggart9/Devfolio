@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 /**
  * BottomBlur component
@@ -25,6 +26,9 @@ const BLUR_LAYERS = [
 ];
 
 export default function BottomBlur() {
+  const pathname = usePathname();
+  if (pathname?.startsWith("/admin")) return null;
+
   const [visible, setVisible] = useState(false);
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 

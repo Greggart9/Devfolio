@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
@@ -20,6 +21,9 @@ const links: { label: string; href: string; external?: boolean }[] = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
+  if (pathname?.startsWith("/admin")) return null;
+
   const [activeHash, setActiveHash] = useState("/#hero");
   const [open, setOpen] = useState(false);
   const [hovered, setHovered] = useState<string | null>(null);

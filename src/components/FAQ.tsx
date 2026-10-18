@@ -2,17 +2,19 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { faqs, faqCategories, FaqCategory } from "@/lib/data";
+import { faqs as defaultFaqs, faqCategories, FaqCategory } from "@/lib/data";
 import { Plus, Minus, Copy, Check } from "lucide-react";
 import { fireConfetti } from "@/lib/utils";
 import { RevealLine, FadeUp } from "./KineticText";
+import { FaqItem } from "@/lib/data-service";
 
-export default function FAQ() {
+export default function FAQ({ initialFaqs }: { initialFaqs?: FaqItem[] }) {
+  const allFaqs = initialFaqs && initialFaqs.length > 0 ? initialFaqs : defaultFaqs;
   const [activeCategory, setActiveCategory] = useState<FaqCategory>("General");
   const [openQuestion, setOpenQuestion] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
 
-  const currentFaqs = faqs.filter((f) => f.category === activeCategory);
+  const currentFaqs = allFaqs.filter((f) => f.category === activeCategory);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("oluwadamilare.greggart9@gmail.com");

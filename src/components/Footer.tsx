@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUp, ArrowUpRight, Copy, Check, Mail } from "lucide-react";
 import { fireConfetti } from "@/lib/utils";
@@ -65,6 +66,9 @@ function LinkedInIcon() {
 }
 
 export default function Footer() {
+  const pathname = usePathname();
+  if (pathname?.startsWith("/admin")) return null;
+
   const containerRef = useRef<HTMLElement>(null);
   const [copiedEmail, setCopiedEmail] = useState(false);
   const email = "oluwadamilare.greggart9@gmail.com";
@@ -170,6 +174,7 @@ export default function Footer() {
                   { label: "Projects", href: "/#projects" },
                   { label: "Services", href: "/#skills" },
                   { label: "Contact", href: "/#contact" },
+                  { label: "Admin", href: "/admin" },
                 ].map((link) => (
                   <RollingLink key={link.label} href={link.href} label={link.label} />
                 ))}
@@ -199,7 +204,16 @@ export default function Footer() {
 
         {/* ── Bottom Bar: Copyright & Circular Glass Social Pills ── */}
         <div className="relative z-10 flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 border-t border-slate-200 text-xs font-mono text-[var(--color-text-muted)]">
-          <p>© {new Date().getFullYear()} Olúwadámiláre Ogundare. Built with Next.js 14 & Tailwind CSS.</p>
+          <div className="flex flex-wrap items-center gap-2">
+            <p>© {new Date().getFullYear()} Olúwadámiláre Ogundare. Built with Next.js 14 & Tailwind CSS.</p>
+            <span className="text-slate-300">•</span>
+            <a
+              href="/admin"
+              className="text-slate-400 hover:text-[var(--accent)] transition-colors underline-offset-4 hover:underline"
+            >
+              Admin
+            </a>
+          </div>
 
           <div className="flex items-center gap-3">
             {/* Circular Glass Social Buttons */}

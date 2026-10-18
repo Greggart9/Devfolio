@@ -6,17 +6,32 @@ import WhyMe from "@/components/WhyMe";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
+import {
+  getProjects,
+  getServices,
+  getSkills,
+  getAboutProfile,
+  getFaqs,
+} from "@/lib/data-service";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const [projects, services, skills, aboutProfile, faqs] = await Promise.all([
+    getProjects(),
+    getServices(),
+    getSkills(),
+    getAboutProfile(),
+    getFaqs(),
+  ]);
+
   return (
     <main className="relative z-10">
       <Hero />
-      <About />
-      <Projects />
-      <Services />
+      <About initialProfile={aboutProfile} />
+      <Projects initialProjects={projects} />
+      <Services initialServices={services} initialSkills={skills} />
       {/* <WhyMe /> */}
       {/* <Testimonials /> */}
-      <FAQ />
+      <FAQ initialFaqs={faqs} />
       <Contact />
     </main>
   );

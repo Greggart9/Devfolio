@@ -2,12 +2,22 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { services } from "@/lib/data";
+import { services as defaultServices } from "@/lib/data";
 import { Sparkles } from "lucide-react";
 import FallingSkills from "@/components/FallingSkills";
 import { RevealLine, FadeUp } from "./KineticText";
+import { ServiceItem, SkillItem } from "@/lib/data-service";
 
-export default function Services() {
+export default function Services({
+  initialServices,
+  initialSkills,
+}: {
+  initialServices?: ServiceItem[];
+  initialSkills?: SkillItem[];
+}) {
+  const activeServices =
+    initialServices && initialServices.length > 0 ? initialServices : defaultServices;
+
   return (
     <section id="skills" className="py-20 md:py-25 lg:py-34  relative">
       {/* Background ambient glow */}
@@ -38,7 +48,7 @@ export default function Services() {
         </div>
 
         {/* ── Interactive Physics Falling Skill Tags ── */}
-        <FallingSkills />
+        <FallingSkills initialSkills={initialSkills} />
 
         {/* ── Section Subheader for Services ── */}
         <div className="mb-8 pt-4">
@@ -57,7 +67,7 @@ export default function Services() {
 
         {/* ── Core Services Cards Grid (Upper Image + Lower Description) ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((s, i) => (
+          {activeServices.map((s, i) => (
             <motion.div
               key={s.title}
               initial={{ opacity: 0, y: 35, scale: 0.96 }}

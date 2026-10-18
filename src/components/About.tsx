@@ -5,8 +5,25 @@ import { motion } from "framer-motion";
 import { Sparkles, FileText, CheckCircle2, Award } from "lucide-react";
 import { fireConfetti } from "@/lib/utils";
 import { RevealLine, FadeUp } from "./KineticText";
+import { AboutProfile } from "@/lib/data-service";
 
-export default function About() {
+export default function About({ initialProfile }: { initialProfile?: AboutProfile }) {
+  const profile = initialProfile || {
+    headline: "Code that's clean,",
+    subheadline: "fast & production-ready.",
+    intro: "I’m Olúwadámiláre, a frontend developer focused on building visually engaging, high-performance web applications. I bridge design aesthetics with solid technical execution.",
+    detailed_bio: "My focus is on modern web development. I’ve spent the last few years developing different types of web applications. I thrive on the technical challenges of the frontend, whether that means optimizing Core Web Vitals under the hood or ensuring a complex UI is perfectly responsive.",
+    highlights: [
+      "Pixel-Perfect UI Execution",
+      "App Router & Server Actions",
+      "Sub-300ms Fluid Animations",
+      "100% Responsive & Accessible",
+    ],
+    experience_years: "3+",
+    resume_url: "https://docs.google.com/document/d/1-ueGgt97JmLLSbXA332Heyxcb5Q2HGiqcsIMSbmqOhg/edit?usp=sharing",
+    avatar_url: "https://res.cloudinary.com/degearesj/image/upload/v1787267525/Pfp_grnrga.png",
+  };
+
   return (
     <section id="about" className="py-20 md:py-25 lg:py-34 relative overflow-hidden">
       {/* Ambient background blur */}
@@ -25,7 +42,7 @@ export default function About() {
           >
             <div className="relative rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-[0_20px_50px_rgba(0,0,0,0.08)] aspect-[3/4] group">
               <Image
-                src="https://res.cloudinary.com/degearesj/image/upload/v1787267525/Pfp_grnrga.png"
+                src={profile.avatar_url || "https://res.cloudinary.com/degearesj/image/upload/v1787267525/Pfp_grnrga.png"}
                 alt="Olúwadámiláre Ogundare"
                 fill
                 sizes="(max-width: 768px) 100vw, 420px"
@@ -50,7 +67,8 @@ export default function About() {
                 <div>
                   <p className="text-[10px] font-mono text-[var(--accent)] uppercase font-semibold">EXPERIENCE</p>
                   <p className="text-xl font-display font-extrabold text-[var(--color-text-primary)]">
-                    3+ <span className="text-xs font-normal text-[var(--color-text-secondary)]">years</span>
+                    {profile.experience_years}{" "}
+                    <span className="text-xs font-normal text-[var(--color-text-secondary)]">years</span>
                   </p>
                 </div>
               </div>
@@ -75,35 +93,30 @@ export default function About() {
 
               <h2 className="font-display text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
                 <RevealLine delay={0.12} duration={0.65}>
-                  <span>Code that's clean,</span>
+                  <span>{profile.headline}</span>
                 </RevealLine>
                 <RevealLine delay={0.22} duration={0.65}>
-                  <span className="g-text">fast & production-ready.</span>
+                  <span className="g-text">{profile.subheadline}</span>
                 </RevealLine>
               </h2>
             </div>
 
             <FadeUp delay={0.28} y={15}>
               <p className="text-slate-800 text-base md:text-lg leading-relaxed font-medium">
-               I’m Olúwadámiláre, a frontend developer focused on building visually engaging, high-performance web applications. I bridge design aesthetics with solid technical execution.
+                {profile.intro}
               </p> 
             </FadeUp>
 
             <FadeUp delay={0.34} y={15}>
               <p className="text-slate-600 text-sm md:text-[15px] leading-relaxed">
-                My focus is on modern web development. I’ve spent the last few years developing different types of web applications. I thrive on the technical challenges of the frontend, whether that means optimizing Core Web Vitals under the hood or ensuring a complex UI is perfectly responsive. 
+                {profile.detailed_bio}
               </p>
             </FadeUp>
 
             {/* Highlights */}
             <FadeUp delay={0.4} y={15}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-2">
-                {[
-                  "Pixel-Perfect UI Execution",
-                  "App Router & Server Actions",
-                  "Sub-300ms Fluid Animations",
-                  "100% Responsive & Accessible",
-                ].map((item) => (
+                {profile.highlights.map((item) => (
                   <div
                     key={item}
                     className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/80 border border-slate-200/90 shadow-2xs text-xs sm:text-[13px] font-mono font-medium text-slate-800"
@@ -119,7 +132,7 @@ export default function About() {
             <FadeUp delay={0.46} y={15}>
               <div className="pt-4">
                 <a
-                  href="https://docs.google.com/document/d/1-ueGgt97JmLLSbXA332Heyxcb5Q2HGiqcsIMSbmqOhg/edit?usp=sharing"
+                  href={profile.resume_url}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={fireConfetti}

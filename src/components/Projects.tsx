@@ -20,15 +20,17 @@ function GithubIcon({ className = "w-4 h-4" }: { className?: string }) {
   );
 }
 
-const categories = ["All", "Web App", "Website", "AI Web App", "Portfolio", "Backend Development"];
-
-export default function Projects() {
+export default function Projects({ initialProjects }: { initialProjects?: Project[] }) {
+  const allProjects = initialProjects && initialProjects.length > 0 ? initialProjects : projects;
   const [selectedCategory, setSelectedCategory] = useState("All");
+
+  // Dynamically extract categories from current projects
+  const uniqueCategories = ["All", ...Array.from(new Set(allProjects.map((p) => p.category)))];
 
   const filteredProjects =
     selectedCategory === "All"
-      ? projects
-      : projects.filter((p) => p.category.toLowerCase() === selectedCategory.toLowerCase());
+      ? allProjects
+      : allProjects.filter((p) => p.category.toLowerCase() === selectedCategory.toLowerCase());
 
   return (
     <section id="projects" className="py-10 md:py-36 relative">
@@ -64,7 +66,7 @@ export default function Projects() {
             <Filter className="w-3.5 h-3.5" />
             <span>FILTER:</span>
           </div>
-          {categories.map((cat) => {
+          {uniqueCategories.map((cat) => {
             const isActive = selectedCategory === cat;
             return (
               <button

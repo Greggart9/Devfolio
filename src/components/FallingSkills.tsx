@@ -32,11 +32,24 @@ const SKILL_TAGS: SkillTagItem[] = [
   { id: "gsap", label: "GSAP", theme: "accent", w: 150, h: 36 },
 ];
 
-export default function FallingSkills() {
+import { SkillItem } from "@/lib/data-service";
+
+export default function FallingSkills({ initialSkills }: { initialSkills?: SkillItem[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const tagElementsRef = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const [hasTriggered, setHasTriggered] = useState(false);
   const [simKey, setSimKey] = useState(0);
+
+  const activeTags: SkillTagItem[] =
+    initialSkills && initialSkills.length > 0
+      ? initialSkills.map((sk, idx) => ({
+          id: sk.id || `skill-${idx}`,
+          label: sk.label,
+          theme: sk.theme,
+          w: Math.max(90, sk.label.length * 9 + 28),
+          h: 36,
+        }))
+      : SKILL_TAGS;
 
   // Trigger physics drop when scrolled into view
   useEffect(() => {
@@ -94,7 +107,7 @@ export default function FallingSkills() {
     // ── Create Physics Bodies for Each Skill Tag ──
     const tagBodies: { body: Matter.Body; id: string; w: number; h: number }[] = [];
 
-    SKILL_TAGS.forEach((skill, index) => {
+    activeTags.forEach((skill, index) => {
       // Stagger initial drop spawn positions across columns
       const col = index % 4;
       const xOffset = width * 0.12 + col * (width * 0.23) + (Math.random() - 0.5) * 35;
@@ -247,7 +260,7 @@ export default function FallingSkills() {
         )}
 
         {/* Rendered Skill Tag HTML Elements (positioned in physical space by Matter.js) */}
-        {SKILL_TAGS.map((skill) => {
+        {activeTags.map((skill) => {
           let styleClasses = "";
 
           if (skill.theme === "white") {
