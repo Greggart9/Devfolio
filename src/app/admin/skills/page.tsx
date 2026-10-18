@@ -75,7 +75,11 @@ export default function AdminSkillsPage() {
     }
 
     try {
-      await upsertSkill(formData);
+      const res = await upsertSkill(formData);
+      if (res && res.success === false) {
+        setError(res.error || "Failed to save skill");
+        return;
+      }
       setSuccessMsg(`Skill tag "${formData.label}" saved!`);
       setTimeout(() => setSuccessMsg(null), 3000);
       setModalOpen(false);
@@ -94,7 +98,11 @@ export default function AdminSkillsPage() {
     }
 
     try {
-      await deleteSkill(id);
+      const res = await deleteSkill(id);
+      if (res && res.success === false) {
+        alert(`Delete error: ${res.error}`);
+        return;
+      }
       await fetchSkills();
     } catch (err: any) {
       alert(`Delete error: ${err.message}`);

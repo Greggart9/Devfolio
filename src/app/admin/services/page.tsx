@@ -96,7 +96,11 @@ export default function AdminServicesPage() {
     }
 
     try {
-      await upsertService(formData);
+      const res = await upsertService(formData);
+      if (res && res.success === false) {
+        setError(res.error || "Failed to save service");
+        return;
+      }
       setSuccessMsg(`Service "${formData.title}" saved successfully!`);
       setTimeout(() => setSuccessMsg(null), 3000);
       setModalOpen(false);
@@ -115,7 +119,11 @@ export default function AdminServicesPage() {
     }
 
     try {
-      await deleteService(id);
+      const res = await deleteService(id);
+      if (res && res.success === false) {
+        alert(`Delete error: ${res.error}`);
+        return;
+      }
       await fetchServices();
     } catch (err: any) {
       alert(`Delete error: ${err.message}`);

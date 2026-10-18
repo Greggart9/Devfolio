@@ -32,6 +32,12 @@ export default function CloudinaryUploader({
     setUploaded(false);
 
     try {
+      if (file.size > 4.5 * 1024 * 1024) {
+        throw new Error(
+          "File exceeds 4.5MB upload limit. Please paste your Cloudinary URL directly into the field below."
+        );
+      }
+
       const formData = new FormData();
       formData.append("file", file);
       formData.append("folder", folder);
@@ -41,12 +47,24 @@ export default function CloudinaryUploader({
         body: formData,
       });
 
-      const data = await res.json();
-
+      const contentType = res.headers.get("content-type") || "";
       if (!res.ok) {
-        throw new Error(data.error || "Failed to upload file");
+        let errMsg = "Failed to upload file";
+        if (contentType.includes("application/json")) {
+          const errData = await res.json();
+          errMsg = errData.error || errMsg;
+        } else {
+          const text = await res.text();
+          if (res.status === 413 || text.includes("Request Entity Too Large")) {
+            errMsg = "File is too large for direct upload. Please paste a Cloudinary URL directly.";
+          } else {
+            errMsg = `Upload failed (${res.status}): ${text.slice(0, 100)}`;
+          }
+        }
+        throw new Error(errMsg);
       }
 
+      const data = await res.json();
       onUploadSuccess(data.url);
       setUploaded(true);
       setTimeout(() => setUploaded(false), 3000);
@@ -94,9 +112,14 @@ export default function CloudinaryUploader({
       </button>
 
       {error && (
-        <p className="text-[11px] text-red-400 mt-1 flex items-center gap-1 font-mono">
-          <AlertCircle className="w-3 h-3" />
+        <p
+          onClick={() => setError(null)}
+          className="text-[11px] text-red-400 mt-1 flex items-center gap-1 font-mono cursor-pointer hover:opacity-80 transition-opacity"
+          title="Click to dismiss"
+        >
+          <AlertCircle className="w-3 h-3 shrink-0" />
           <span>{error}</span>
+          <span className="text-[10px] text-slate-500 ml-1">(click to dismiss)</span>
         </p>
       )}
     </div>

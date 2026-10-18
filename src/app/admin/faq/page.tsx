@@ -84,7 +84,11 @@ export default function AdminFaqPage() {
     }
 
     try {
-      await upsertFaq(formData);
+      const res = await upsertFaq(formData);
+      if (res && res.success === false) {
+        setError(res.error || "Failed to save FAQ");
+        return;
+      }
       setSuccessMsg("FAQ question saved successfully!");
       setTimeout(() => setSuccessMsg(null), 3000);
       setModalOpen(false);
@@ -103,7 +107,11 @@ export default function AdminFaqPage() {
     }
 
     try {
-      await deleteFaq(id);
+      const res = await deleteFaq(id);
+      if (res && res.success === false) {
+        alert(`Delete error: ${res.error}`);
+        return;
+      }
       await fetchFaqs();
     } catch (err: any) {
       alert(`Delete error: ${err.message}`);

@@ -162,7 +162,11 @@ export default function AdminProjectsPage() {
     }
 
     try {
-      await upsertProject(formData);
+      const res = await upsertProject(formData);
+      if (res && res.success === false) {
+        setError(res.error || "Failed to save project");
+        return;
+      }
       setSuccessMsg(`Project "${formData.title}" saved successfully!`);
       setTimeout(() => setSuccessMsg(null), 3000);
       setModalOpen(false);
@@ -180,7 +184,11 @@ export default function AdminProjectsPage() {
     }
 
     try {
-      await deleteProject(slug);
+      const res = await deleteProject(slug);
+      if (res && res.success === false) {
+        alert(`Delete error: ${res.error}`);
+        return;
+      }
       await fetchProjects();
     } catch (err: any) {
       alert(`Delete error: ${err.message}`);

@@ -67,7 +67,11 @@ export default function AdminAboutPage() {
     setError(null);
 
     try {
-      await updateAboutProfile(profile);
+      const res = await updateAboutProfile(profile);
+      if (res && res.success === false) {
+        setError(res.error || "Failed to update about profile");
+        return;
+      }
       setSuccessMsg("About profile saved successfully!");
       setTimeout(() => setSuccessMsg(null), 3000);
       await fetchProfile();
